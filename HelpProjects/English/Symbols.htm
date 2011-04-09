@@ -1,0 +1,93 @@
+<! DOCTYPE HTML PUBLIC " - // W3C // DTD HTML 4.01 Transitional // EN ">
+
+<html>
+<head>
+	<title>Use of symbols</title>
+	<link rel = "stylesheet" type = "text/css" href = "help.css"></link>
+</head>
+
+<body>
+<table border = "1" cellspacing = "0" cellpadding = "10px" bordercolor = "#C0C0C0">
+<tr valign = "top"><th>the Symbol</th><th>Value</th></tr>
+<tr valign = "top"><td class = "Symbol">\</td><td>One of following variants:
+<ul>
+<li>For symbols which are usually examined as literal, specifies, that the following symbol is special and should not be interpreted as literal. 
+<p class = "Example">For example: "b" is match with a symbol "b". At a location of a symbol backslash before b, that is "\b", the symbol becomes special, designating border of a word.</p></li>
+<li>For symbols which are usually examined as special, specifies that the following symbol is not special and should be interpreted as literal.
+<p class = "Example">For example:<span class = "Symbol">*</span>it is a special symbol which means 0 or more concurrences to ocurrence of the previous symbol;</p>
+<p class = "Example">For example: "a*" means 0 or more symbols "and". For substitution * as literal, it is necessary to put before it backslash;</p>
+<p class = "Example">For example: "a\ *" is match with "a *".</p></li>
+</ul>
+</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">^</td><td>Is match with the beginning of the text (if the option<span class = "Symbol">Multiline</span>is switched off) or lines (if the option<span class = "Symbol">Multiline</span>is included).
+<p class = "Example">For example: "^A" does not coincide with "A" in line "an A," but is match with the first And in line "An A".</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\A</td><td>Is match with the beginning of the text (the option<span class = "Symbol">Multiline</span>is ignored).</td></tr>
+
+<tr valign = "top"><td class = "Symbol">$</td><td>Is match with the end of input or a line.
+<p class = "Example">For example: "t$" does not coincide with "t" in "eater", but is match in "eat."</p></td></tr>
+<tr valign = "top"><td class = "Symbol">*</td><td>the previous symbol is match 0 or more times.
+<p class = "Example">For example: "ba*" is match with "baaaa" in "A loud baaaaaaang" and with "b" in "A bird is flying", but does not coincide in "A fresh fish".
+<p class = "Example">For example: "a +" is match with "a" in "candy" and all the a " s in "caaaaaaandy."</p></td></tr>
+<tr valign = "top"><td class = "Symbol">?</td><td>the Previous symbol is match 0 or 1 time.
+<p class = "Example">For example: "e? le?" Is match with "el" in "angel" and with "le" in "angle."</p></td></tr>
+<tr valign = "top"><td class = "Symbol">.</td><td>" the Decimal point " is match with any single symbol, except for a symbol of a new line.
+<p class = "Example">For example:".n" is match with "an" and with "on" in " nay, an apple is on the tree ", but not with "nay."</p></td></tr>
+<tr valign = "top"><td class = "Symbol">x|y</td><td>Is match with "x" or with "y".
+<p class = "Example">For example: "green|red" is match with "green" in " green apple " and with "red" in " red apple. "</p></td></tr>
+<tr valign = "top"><td class = "Symbol">{n}</td><td>Where n this positive whole. The previous symbol is match precisely n time.
+<p class = "Example">For example: "a{2}" does not coincide with "a" in "candy", but is match with all "a" in "caandy" and with first two "a" in "caaandy."</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">{n,}</td><td>Where n this positive whole. The previous symbol is match at least n time.
+<p class = "Example">For example: "a{2,}does not coincide with "a "in" candy ", but is match with all " a "in" caandy " and in "caaaaaaandy."</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">{n, m}</td><td>Where n and m it is the positive whole. The previous symbol is match at least n and a maximum m time.
+<p class = "Example">For example: "a{1,3}" does not coincide with what in "cndy", is match with "a" in " candy, " to first two "a" in "caandy" and to first three "a" in "caaaaaaandy" Pay attention, that in "caaaaaaandy" is match only "aaa" though the line-original contains more symbols "a."</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">[xyz]</td><td>the Character set. Is match with any one of symbols патэрна. You can specify a range of symbols, using a hyphen.
+<p class = "Example">For example: "[abcd]" it is equivalent "[a-d]". Is match with "b" in "brisket" and with "c" in "ache."</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">[^xyz]</td><td>Denying of a character set. That is concurrence to everything besides that is in brackets. You can specify a range of symbols, using a hyphen.
+<p class = "Example">For example: "[^abc]" this same, that "[^a-c]". Originally is match with "r" in "break" and with "u" in "cuff."</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">[\b]</td><td>Is match with backspace. (to not confuse with "\b.")</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\b</td><td>Is match with border of a word, such as a blank or a symbol of a new line. (to not confuse with "[\b]".)
+<p class = "Example">For example: "\bn\w" is match with "no" in "noonday"; "\wy\b" is match with "ly" in "possibly crystal".</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\B</td><td>Is match with not-border words.
+<p class = "Example">For example: "\w\Bn" is match with "on" in "noonday"; "\wy\B" is match with "ry" in "possibly crystal".</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\cX</td><td>Where "X" it is an operating symbol. Is match with operating symbol in line.
+<p class = "Example">For example: "\cM" is match with a combination "control-M."</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\d</td><td>Is match with figure. It is equivalent "[0-9]".
+<p class = "Example">For example: "\d" or "[0-9]" is match with "2" in line "B2 is the suite number".</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\D</td><td>Is match with not-figure. It is equivalent "[^0-9]".
+<p class = "Example">For example: "\D" or "[^0-9]" is match with "B" in "B2 is the suite number".</p></td></tr>
+
+<tr valign = "top"><td class = "Symbol">\f</td><td>Is match with "form feed".</td></tr>
+<tr valign = "top"><td class = "Symbol">\n</td><td>Is match with "line feed".</td></tr>
+<tr valign = "top"><td class = "Symbol">\r</td><td>Is match with "return of the carriage".</td></tr>
+<tr valign = "top"><td class = "Symbol">\s</td><td>Is match with single space a symbol, including "blank", "tabulation", "line feed", "form feed".<br/>
+It is equivalent [\f\n\r\t\v].
+<p class = "Example">For example: "\s\w *" is match with "bar" in " foo bar".</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\S</td><td>Is match with the single symbol which is distinct from a blank. It is equivalent [\f\n\r\t\v].
+<p class = "Example">For example: "\S\w *" is match with "foo" in "foo bar."</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\t</td><td>Is match with "tabulation".</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\v</td><td>Is match with "vertical tabulation".</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\w</td><td>Is match with any alphanumeric symbol, including a symbol of emphasis. It is equivalent "[A-Za-z0-9_]".
+<p class = "Example">For example: "\w" is match with "a" in "apple", with "5" in " $5.28" and with "3" in "3D."</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\W</td><td>Is match with any not-alphanumeric a symbol. It is equivalent "[^A-Za-z0-9_]".
+<p class = "Example">For example: "\W" or "[$A-Za-z0-9_]" 50% coincide from "%" in". "</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\n</td><td>Where n this positive whole. The return link to last concurrence substrings with n in brackets from regular expression (in view of the left brackets).
+<p class = "Example">For example: "apple(,)\sorange\1" is match with "apple, orange," in "apple, orange, cherry, peach."<br/>
+The note: If the amount of the left brackets is less than the number specified in \n\n it is considered octal escape-sequence as it is described in a following number{line}.</p></td></tr>
+<tr valign = "top"><td class = "Symbol">\ooctal<br/>
+\xhex</td><td>Where "\ooctal" it 8-bit escape-value or where "\xhex" it 16-bit escape-value. Enables to introduce ASCII-codes in regular expressions.</p></td></tr>
+</table>
+<hr /><sub>&nbsp;&copy;2005-2006&nbsp;RegexExplorer.com</sub>
+<br /><sup>All rights reserved.</sup>
+</body></html>

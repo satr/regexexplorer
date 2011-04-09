@@ -1,0 +1,21 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\..\Help\Help.chm
+Contents file=Contents.hhc
+Default topic=Intro.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+Intro.htm
+IsMatch.htm
+Matches.htm
+BatchCheck.htm
+MainMenu.htm
+Symbols.htm
+WhatIsRegex.html
+
+[INFOTYPES]
+

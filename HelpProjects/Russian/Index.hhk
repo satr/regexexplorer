@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Intro">
+		<param name="Name" value="Введение">
+		<param name="Local" value="Intro.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IsMatch">
+		<param name="Name" value="Соответствие">
+		<param name="Local" value="IsMatch.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Matches">
+		<param name="Name" value="Соответствия">
+		<param name="Local" value="Matches.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Check by list">
+		<param name="Name" value="Проверка по списку">
+		<param name="Local" value="BatchCheck.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Captions">
+		<param name="Local" value="Captions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Clear">
+		<param name="Name" value="Очистить">
+		<param name="Local" value="MainMenu.htm#Clear">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Symbols">
+		<param name="Name" value="Использование символов">
+		<param name="Local" value="Symbols.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RegexOptions">
+		<param name="Name" value="Описание главного меню">
+		<param name="Local" value="MainMenu.htm#RegexOptions">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Preferences">
+		<param name="Name" value="Описание главного меню">
+		<param name="Local" value="MainMenu.htm#Preferences">
+		</OBJECT>
+</UL>
+</BODY></HTML>

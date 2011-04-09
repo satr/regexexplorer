@@ -1,0 +1,62 @@
+<! DOCTYPE HTML PUBLIC " - // W3C // DTD HTML 4.01 Transitional // EN ">
+
+<html>
+<head>
+	<title>The description of operating modes</title>
+	<link rel = "stylesheet" type = "text/css" href = "help.css"></link>
+</head>
+
+<body><a id = "Top">
+<h2>The description of operating modes - "Captions" (the tab "Matches/Captions")</h2>
+<h4>"Captions" - sample of a collection of lines matched to a pattern</h4>
+<p>Allocation from the text (including multiline text) collections of the lines which mutch to a pattern of regular expression</p>
+<p>The Operating procedure:</p>
+<ol>
+<li>Into a field "Target text" to enter the text which will be checked on conformity to a pattern</li>
+<li>Into a field "Regex pattern" to enter the text of a pattern</li>
+<li>To press button "Check" or a key "Enter" (if the cursor is in a field of input of a pattern)</li>
+<li>In a field "Result" will be displayed result of check: "There are Captions" or "No matches"</li>
+<li>In the list of "Captions" the collection of lines from the checked text, which mutch to a pattern of regular expression will be displayed</li>
+</ol>
+<p><i>Sample:</i>
+<p />In the pattern field enter:
+<br /><CODE>(?&lt;1&gt;\w+)\s+(?&lt;1&gt;ca\w)</CODE>
+<p />Choose the mode "Matches/Captions" (the tab with same name), inside choose the tab "Captions"
+<p /><img src="CaptionsStep01.GIF" />
+<p />In the field "Target text" enter the text:
+<br /><CODE>gray cat, yellow cab, green car</CODE>
+<p /><img src="CaptionsStep02.GIF" />
+<p />Click the button "Check"
+<p /><img src="CaptionsStep03.GIF" />
+<p />In the list "Captions" the collection of captions will be displayed - a pair per line, placed in the same group:
+<p /><img src="CaptionsStep04.GIF" />
+<p />Change the pattern:
+<br /><CODE>(?&lt;1&gt;\w+)\s+(?&lt;2&gt;ca\w)</CODE>
+<p /><img src="CaptionsStep05.GIF" />
+<p />Click the button "Check"
+<p /><img src="CaptionsStep06.GIF" />
+<p />In the list "Captions" the collection of captions will be displayed - a single value per line
+<p /><img src="CaptionsStep07.GIF" />
+<p />placed in two groups
+<p /><img src="CaptionsStep08.GIF" />
+<p />which can be selected from the drop down list
+<p /><img src="CaptionsStep09.GIF" />
+<p />In the field "Captions result pattern" enter a pattern:
+<br /><CODE>$1;$2;</CODE>
+<p /><img src="CaptionsStep10.GIF" />
+<p />Click the button "Check"
+<p /><img src="CaptionsStep11.GIF" />
+<p />In the list "Captions" the collection of captions will be displayed, made according to the result pattern. 
+In the drop down list, in addition to "Values by result pattern", groups still can be selected.
+<p /><img src="CaptionsStep12.GIF" />
+<p />In "Captions result pattern" a number, followed by the symbol "$", defines a number of caption to be placed in this position.
+Rest symbols are any necessary.
+<p /><i>Samples of "caption result patterns":</i>
+<br /><CODE>Color: $1. Object: $2.</CODE>
+<br /><CODE>$2 has a color $1.</CODE>
+<br /><CODE>This color is "$1",</CODE>
+<p><a href="#Top">top</a></p>
+<hr /><sub>&nbsp;&copy;2005-2006&nbsp;RegexExplorer.com</sub>
+<br /><sup>All rights reserved.</sup>
+</body>
+</html>

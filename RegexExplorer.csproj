@@ -1,0 +1,482 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{628F7314-89FC-4CA4-AC5E-5F8BB48A9689}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>RegexExplorer.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>RegexExplorer</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RegexExplorer</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\KeyProvider\KeyProvider\KeyPair.cs">
+      <Link>KeyProvider\KeyPair.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CustomDelegates.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CustomExceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Msgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MsgsBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NullStoredItemsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Preferences.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\RegexOptionsHolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ResultColors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Scaler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\BaseController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CheckByListController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\FavoriteRegexPatternsListController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\HistoryFilesListController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\HistoryRegexPatternsListController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\IsMatchController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\ListViewProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MainController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MatchesController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\PredefinedRegexPatternsListController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\RegexControllerBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\StatusBarController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\StoredItemsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditableListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LicenseInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ListViewItemComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\MatchesFileItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MatchesResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MatchesTargetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RegexControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RegexOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RegexPatternControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TitledTextField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UnregisteredInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileActions\MatchesFileItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileActions\MatchesFilesList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileActions\MatchesRecentFilesList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileActions\OpenFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileActions\OpenFileProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ICheckClearEdit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IEdit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IItemsListController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ILoadList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IOpenFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IRegexPatternActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ISaveList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IShowSelectedItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IValueControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LicenseHelper\CustomDelegates.cs" />
+    <Compile Include="LicenseHelper\LicenseController.cs" />
+    <Compile Include="LicenseHelper\LicenseHelperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LicenseHelper\LicenseKeyFileEventArgs.cs" />
+    <Compile Include="LicenseHelper\Msg.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\PreferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\QuickListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\SpecialSymbolsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\SymbolsQuickTipsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\TextFieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\FavoriteRegexPatternsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\HistoryRegexPatternsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\PredefinedRegexPatternsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\RegexPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\RegexPatternCategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\RegexPatternEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\RegexPatternsTipsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\StoredRegexPatternsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexPatternActions\StoredRegexPatternsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBarControls\CheckClearToolBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolBarControls\EditToolBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolBarControls\FileToolBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolBarControls\ListToolBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolBarControls\ScalerToolBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\CustomExceptions.cs" />
+    <Compile Include="Tools\DefaultMsgs.cs" />
+    <Compile Include="Tools\EditionHelper.cs" />
+    <Compile Include="Tools\GuiObjectsCollection.cs" />
+    <Compile Include="Tools\HelpHolder.cs" />
+    <Compile Include="Tools\ISafeSerialize.cs" />
+    <Compile Include="Tools\Lang.cs" />
+    <Compile Include="Tools\LangBase.cs" />
+    <Compile Include="Tools\LanguageSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Messenger.cs" />
+    <Compile Include="Tools\PreferencesBase.cs" />
+    <Compile Include="Tools\StoredItemsList.cs" />
+    <Compile Include="Tools\StoredObject.cs" />
+    <EmbeddedResource Include="Controls\CheckResultControl.resx">
+      <DependentUpon>CheckResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditableListControl.resx">
+      <DependentUpon>EditableListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LicenseInfoControl.resx">
+      <DependentUpon>LicenseInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MatchesFileItemControl.resx">
+      <DependentUpon>MatchesFileItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MatchesResultControl.resx">
+      <DependentUpon>MatchesResultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MatchesTargetControl.resx">
+      <DependentUpon>MatchesTargetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RegexControl.resx">
+      <DependentUpon>RegexControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RegexOptionsControl.resx">
+      <DependentUpon>RegexOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RegexPatternControl.resx">
+      <DependentUpon>RegexPatternControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TitledTextField.resx">
+      <DependentUpon>TitledTextField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UnregisteredInfoControl.resx">
+      <DependentUpon>UnregisteredInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileActions\OpenFileForm.resx">
+      <DependentUpon>OpenFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileActions\OpenFileProcessForm.resx">
+      <DependentUpon>OpenFileProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseHelper\LicenseHelperForm.resx">
+      <DependentUpon>LicenseHelperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\PreferencesForm.resx">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\QuickListForm.resx">
+      <DependentUpon>QuickListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\SpecialSymbolsForm.resx">
+      <DependentUpon>SpecialSymbolsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\SymbolsQuickTipsForm.resx">
+      <DependentUpon>SymbolsQuickTipsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\TextFieldForm.resx">
+      <DependentUpon>TextFieldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegexPatternActions\StoredRegexPatternsForm.resx">
+      <DependentUpon>StoredRegexPatternsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBarControls\CheckClearToolBarControl.resx">
+      <DependentUpon>CheckClearToolBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBarControls\EditToolBarControl.resx">
+      <DependentUpon>EditToolBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBarControls\FileToolBarControl.resx">
+      <DependentUpon>FileToolBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBarControls\ListToolBarControl.resx">
+      <DependentUpon>ListToolBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBarControls\ScalerToolBarControl.resx">
+      <DependentUpon>ScalerToolBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\LanguageSettingsControl.resx">
+      <DependentUpon>LanguageSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="RegexExplorer.ico" />
+    <None Include="EULA\EULA.rtf" />
+    <None Include="Help\Help.chm" />
+    <None Include="Help\RusHelp.chm" />
+    <None Include="Language\English.lst" />
+    <None Include="Language\Russian.lst" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LicenseKeys\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>md $(ProjectDir)$(OutDir)Help
+md $(ProjectDir)$(OutDir)Lang
+copy $(ProjectDir)Help\*.chm $(ProjectDir)$(OutDir)Help
+copy $(ProjectDir)Language\*.lst $(ProjectDir)$(OutDir)Lang
+copy $(ProjectDir)EULA\*.rtf $(ProjectDir)$(OutDir)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,22 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\..\Help\RusHelp.chm
+Contents file=Contents.hhc
+Default topic=Intro.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x419 Russian
+
+
+[FILES]
+Intro.htm
+IsMatch.htm
+Matches.htm
+BatchCheck.htm
+MainMenu.htm
+Symbols.htm
+WhatIsRegex.html
+Captions.htm
+
+[INFOTYPES]
+

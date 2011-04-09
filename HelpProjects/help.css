@@ -1,0 +1,40 @@
+
+H2.Title {
+	border-style : none solid solid solid;
+	border : 1 Black;
+}
+H4.ItemsList {
+	font-style : italic;
+}
+BODY {
+	font-family : Tahoma;
+	font-size : 12px;
+}
+P.Top {
+	font-style : italic;
+}
+P, LI {
+	
+}
+P.Example {
+	font-size : x-small;
+}
+SPAN.Symbol {
+	font-weight : bold;
+}
+
+TABLE {
+	font-size : 12px;
+	font-family : Tahoma;
+}
+TH {
+	font-family : Tahoma;
+	font-size : 14px;
+	font-weight : bold;
+}
+TD.Symbol {
+	font-weight : bold;
+	font-family : Tahoma;
+	font-size : 14px;
+}
+

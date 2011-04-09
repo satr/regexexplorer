@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>Использование символов</title>
+	<link rel="stylesheet" type="text/css" href="help.css"></link>
+</head>
+
+<body>
+<table border="1" cellspacing="0" cellpadding="10px" bordercolor="#C0C0C0">
+<tr valign="top"><th>Символ</th> <th>Значение</th></tr>
+<tr valign="top"><td class="Symbol">\</td><td>Один из следующих вариантов:
+<ul>
+<li>Для символов, которые обычно рассматриваются литерально, указывает, что следующий символ является специальным и не должен интерпретироваться литерально. 
+<p class="Example">Например: "b" совпадает с символом "b". При помещении символа backslash перед b, то есть "\b", символ становится специальным, обозначая границу слова.</p></li>
+<li>Для символов, которые обычно рассматриваются как специальные, указывает что следующий символ не является специальным и должен интерпретироваться литерально.
+<p class="Example">Например: <span class="Symbol">*</span> это специальный символ, который означает 0 или более совпадений с вхождением предыдущего символа;</p>
+<p class="Example">Например: "a*" означает 0 или более символов "а". Для подстановки * литерально, нужно поставить перед ним backslash;</p> 
+<p class="Example">Например: "a\*" совпадает с "a*".</p></li>
+</ul>
+</p></td></tr>
+
+<tr valign="top"><td class="Symbol">^</td><td>Совпадает с началом текста (если опция <span class="Symbol">Multiline</span> выключена) или строки (если опция <span class="Symbol">Multiline</span> включена).
+<p class="Example">Например: "^A" не совпадает с "A" в строке "an A," но совпадает с первой А в строке "An A".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\A</td><td>Совпадает с началом текста (опция <span class="Symbol">Multiline</span> игнорируется).</td></tr>
+
+<tr valign="top"><td class="Symbol">$</td><td>Совпадает с концом ввода или строки.
+<p class="Example">Например: "t$" не совпадает с "t" в "eater", но совпадает в "eat".</p></td></tr>
+<tr valign="top"><td class="Symbol">*</td><td>Предшествующий символ совпадает 0 или более раз.
+<p class="Example">Например: "ba*" совпадает с "baaaa" в "A loud baaaaaaang" и с "b" в "A bird is flying", но не совпадает в "A fresh fish".
+<p class="Example">Например: "a+" совпадает с "a" в "candy" and all the a"s in "caaaaaaandy."</p></td></tr>
+<tr valign="top"><td class="Symbol">?</td><td>Предшествующий символ совпадает 0 или 1 раз.
+<p class="Example">Например: "e?le?" совпадает с "el" в "angel" и с "le" в "angle."</p></td></tr>
+<tr valign="top"><td class="Symbol">.</td><td>"Десятичная точка" совпадает с любым одиночным символом, кроме символа новой строки.
+<p class="Example">Например: ".n" совпадает с "an" и с "on" в "nay, an apple is on the tree", но не с "nay".</p></td></tr>
+<tr valign="top"><td class="Symbol">x|y</td><td>Совпадает с "x" или с "y".
+<p class="Example">Например: "green|red" совпадает с "green" в "green apple" и с "red" в "red apple."</p></td></tr>
+<tr valign="top"><td class="Symbol">{n}</td><td>Где n это положительное целое. Предшествующий символ совпадает точно n раз.
+<p class="Example">Например: "a{2}" не совпадает с "a" в "candy", но совпадает со всеми "a" в "caandy" и с первыми двумя "a" в "caaandy."</p></td></tr>
+
+<tr valign="top"><td class="Symbol">{n,}</td><td>Где n это положительное целое. Предшествующий символ совпадает как минимум n раз.
+<p class="Example">Например: "a{2,} не совпадает с "a" в "candy", но совпадает со всеми "a" в "caandy" и в "caaaaaaandy."</p></td></tr>
+
+<tr valign="top"><td class="Symbol">{n,m}</td><td>Где n и m это положительные целые. Предшествующий символ совпадает как минимум n и максимум m раз.
+<p class="Example">Например: "a{1,3}" не совпадает ни с чем в "cndy", совпадает с "a" in "candy," первыми двумя "a" в "caandy" и первыми тремя "a" в "caaaaaaandy" Обратите внимание, что в "caaaaaaandy" совпадает только "aaa", хотя строка-оригинал содержит больше символов "a".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">[xyz]</td><td>Набор символов. Совпадает с любым одним из символов патэрна. Вы можете специфицировать диапазон символов, используя дефис.
+<p class="Example">Например: "[abcd]" эквивалентно "[a-d]". Совпадает с "b" в "brisket" и с "c" в "ache".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">[^xyz]</td><td>Отрицание набора символов. То есть совпадение со всем, кроме того, что находится в скобках. Вы можете специфицировать диапазон символов, используя дефис.
+<p class="Example">Например: "[^abc]" это то же самое, что "[^a-c]". Первоначально совпадает с "r" в "break" и с "u" в "cuff".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">[\b]</td><td>Совпадает с backspace. (Не путать с "\b".)</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\b</td><td>Совпадает с границей слова, такой как пробел или символ новой строки. (Не путать с "[\b]".)
+<p class="Example">Например: "\bn\w" совпадает с "no" in "noonday"; "\wy\b" совпадает с "ly" в "possibly crystal".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\B</td><td>Совпадает с не-границей слова.
+<p class="Example">Например: "\w\Bn" совпадает с "on" в "noonday"; "\wy\B" совпадает с "ry" в "possibly crystal".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\cX</td><td>Где "X" это управляющий символ. Совпадает с управляющим символом в строке.
+<p class="Example">Например: "\cM" совпадает с комбинацией "control-M".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\d</td><td>Совпадает с цифрой. Эквивалентно "[0-9]".
+<p class="Example">Например: "\d" или "[0-9]" совпадает с "2" в строке "B2 is the suite number".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\D</td><td>Совпадает с не-цифрой. Эквивалентно "[^0-9]".
+<p class="Example">Например: "\D" или "[^0-9]" совпадает с "B" в "B2 is the suite number".</p></td></tr>
+
+<tr valign="top"><td class="Symbol">\f</td><td>Совпадает с "переводом страницы".</td></tr>
+<tr valign="top"><td class="Symbol">\n</td><td>Совпадает с "переводом строки".</td></tr>
+<tr valign="top"><td class="Symbol">\r</td><td>Совпадает с "возвратом каретки".</td></tr>
+<tr valign="top"><td class="Symbol">\s</td><td>Совпадает с одиночным пробельным символом, включая "пробел", "табуляцию", "перевод строки", "перевод страницы".<br />
+Эквивалентно [ \f\n\r\t\v].
+<p class="Example">Например: "\s\w*" совпадает с " bar" в "foo bar".</p></td></tr>
+<tr valign="top"><td class="Symbol">\S</td><td>Совпадает с одиночным символом, отличным от пробела. Эквивалентно [^ \f\n\r\t\v].
+<p class="Example">Например: "\S\w*" совпадает с  "foo" в "foo bar."</p></td></tr>
+<tr valign="top"><td class="Symbol">\t</td><td>Совпадает с "табуляцией".</p></td></tr>
+<tr valign="top"><td class="Symbol">\v</td><td>Совпадает с "верикальной табуляцией".</p></td></tr>
+<tr valign="top"><td class="Symbol">\w</td><td>Совпадает с любым алфавитно-цифровым символом, включая символ подчёркивания. Эквивалентно "[A-Za-z0-9_]".
+<p class="Example">Например: "\w" совпадает с  "a" в "apple", с "5" в "$5.28" и с "3" в "3D."</p></td></tr>
+<tr valign="top"><td class="Symbol">\W</td><td>Совпадает с любым не-алфавитно-цифровым символом. Эквивалентно "[^A-Za-z0-9_]".
+<p class="Example">Например: "\W" или "[^$A-Za-z0-9_]" совпадает с "%" в "50%."</p></td></tr>
+<tr valign="top"><td class="Symbol">\n</td><td>Где n это положительное целое. Обратная ссылка на последнее совпадение подстроки с n в скобках из регулярного выражения (с учётом левых скобок).
+<p class="Example">Например: "apple(,)\sorange\1" совпадает с "apple, orange," в "apple, orange, cherry, peach."<br />
+Примечание: Если количество левых скобок меньше числа, специфицированного в \n, то \n считается восьмеричной escape-последовательностью, как описано в следующем ряду.</p></td></tr>
+<tr valign="top"><td class="Symbol">\ooctal<br />
+\xhex</td><td>Где "\ooctal"  это 8-ричное escape-значение или где "\xhex"  это 16-ричное escape-значение. Даёт возможность внедрять ASCII-коды в регулярные выражения.</p></td></tr>
+</table>
+<hr /><sub>&nbsp;&copy;2005-2006&nbsp;RegexExplorer.com</sub>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html>
+<head>
+<title>What is Regex</title>
+	<link rel = "stylesheet" type = "text/css" href = "help.css"></link>
+	</head>
+
+<body>
+<i>
+<table><tr><td width="30%">&nbsp;</td><td>
+Very powerful, universal, platform-independent language SQL is developed for work with databases. That who knows it - open huge facilities on a manipulation data, stored in databases.
+</td></tr>
+<tr><td colspan="2" align="right"><sup>short digression</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>
+</i>
+<h3>Regular expressions</h3>
+<p>Data processing usually means use of databases, but there is a necessity to work and with the usual text. In bases data are organized in the structures allowing conveniently and effectively to work with them special programs and program complexes - such as SQL servers or local systems of type MS Access. However texts are usually organized differently - be frequent at them in general can not structures, but necessity to process the text so is high. Regular expressions this one of the same powerful and flexible means for work with the text, as SQL - for databases.
+Regular expressions are developed for various platforms and programming languages. Now many editors of texts allow at operations of search and replacement to use regular expressions.
+regular expressions - the way precisely to explain to programs of a computer that it is required to make with the text - what to find, as how to remove or replace, by what rules to receive fragments of the text how to check up - whether the text approaches to the set condition. 
+</p><p>Here the most usual cases of use regular expressions:
+<ul>
+<li>Check of correctness of input by the user such data as a name or a surname - they definitely should not contain such signs, as #, %, !, and, etc.;
+</li><li>the phone number, possibly, should contain only figures, brackets, and symbols of plus and a hyphen (minus);
+</li><li>the electronic address should have certain enough structure;
+</li><li>extract data from log-files on the necessary conditions of search - in such files of a line can contain the information on work of independent processes alternately, for different dates; and there may be a number of files...
+</li></ul>
+<p>To realize check of all these data symbol-by-symbol - very labour-consuming work, especially, if from time to time rules of check vary.
+To refuse such check absolutely - it is unreasonable, and often and dangerously. Mistakes of input by the user of data are usual. The wide circulation of systems of access to appendices through the Internet does necessity of check of acting data simply obligatory. Reception of access to system by means of input by the user of the lines containing special symbols or commands became already usual practice of breaking.
+</p><p>
+All the described needs and still - can be effectively solved by many other things by means of regular expressions.
+However there is one significant difficulty - especially for beginners - patterns of regular expressions look like the perfect nonsense and beat off any hunting to deal with them. Studying of these strange sequences of symbols makes so upset, that is usually postponed till the best times. Nevertheless it is possible to approve definitely - the spent efforts precisely that stand. Economy of time and forces at use of regular expressions is just wonderful. And certainly the programs specially developed for designing and debugging of regular expressions. Usually in them there are such means, as wizards, builders, analyzers and parsers of regular expressions, and certainly ready-to-use patterns.
+</p><p><i>Example:</i>
+</p><p>The user should enter date in the certain format - for example "yyyy-mm-dd". How to be convinced, that the line contains what we expect? The simplest variant - to check up symbol-by-symbol, that all over again there are four figures, then a hyphen, then two figures, etc. With use regular expressions it is necessary to check up simply, that the received line corresponds to a pattern <code>\d{4}-\d{2}-\d{2}</code> 
+In this pattern <code>\d</code> means any figure, the hyphen specifies the position, and <code>{4}</code> and <code>{2}</code> define how many precisely symbols it is expected. Certainly, correctness of the date needs to be checked up separately, but already at input in fields of a browser it is possible to specify an inaccuracy of next lines:
+</p><pre>1234-AA-12
+123-12-34
+1234 - 56-78
+1234-56-7
+@#$*-123
+%2354;
+&lt;script&gt;alert("Hello");&lt;/script&gt;
+</pre>
+<p>
+All actions are reduced to check lines match to a pattern by method IsMatch and the further check of correctness of the entered date.
+It is possible to make a pattern even more certain <code>((19)|(20))\d{2}-[01]\d-[0-3]\d</code>
+First numbers 19 or 20 (the symbol of direct feature means operation "or", and brackets are used as in the math), then two figures, then a hyphen, figure 0 or 1, for it any figure, then a hyphen, for which figure from a range from 0 up to 3, and any figure finishes a line.
+Before check on correctness of date it is possible to exclude still a lot of incorrect lines - only having used more complex regular expression and not changing lines of a code of the program.
+</p><p>Such regular expressions can be stored in files of preferences, fields of properties of controls or in database tables that will allow replacing easily them if requirements to the entered information will change.
+</p><p>It becomes very fast development of patterns by an interesting problem - similar to children's puzzles. It is important, that thus near at hand there was a <a href="http://www.RegexExplorer.com">convenient&nbsp;tool</a>.
+</p>
+<hr /><sub>&nbsp;&copy;2005-2006&nbsp;RegexExplorer.com</sub>
+<br /><sup>All rights reserved.</sup>
+</body>
+</html>
+

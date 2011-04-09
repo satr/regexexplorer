@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Acirc;&acirc;&aring;&auml;&aring;&iacute;&egrave;&aring;">
+		<param name="Local" value="Intro.htm">
+		<param name="New" value="1">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&times;&ograve;&icirc; &ograve;&agrave;&ecirc;&icirc;&aring; Regex">
+		<param name="Local" value="WhatIsRegex.html">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Icirc;&iuml;&egrave;&ntilde;&agrave;&iacute;&egrave;&aring;">
+		<param name="New" value="1">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ntilde;&icirc;&icirc;&ograve;&acirc;&aring;&ograve;&ntilde;&ograve;&acirc;&egrave;&aring;">
+			<param name="Local" value="IsMatch.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ntilde;&icirc;&icirc;&ograve;&acirc;&aring;&ograve;&ntilde;&ograve;&acirc;&egrave;&yuml;">
+			<param name="Local" value="Matches.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ocirc;&eth;&agrave;&atilde;&igrave;&aring;&iacute;&ograve;&ucirc;">
+			<param name="Local" value="Captions.htm">
+			<param name="New" value="1">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&eth;&icirc;&acirc;&aring;&eth;&ecirc;&agrave; &iuml;&icirc; &ntilde;&iuml;&egrave;&ntilde;&ecirc;&oacute;">
+			<param name="Local" value="BatchCheck.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Atilde;&euml;&agrave;&acirc;&iacute;&icirc;&aring; &igrave;&aring;&iacute;&thorn;">
+		<param name="Local" value="MainMenu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Egrave;&ntilde;&iuml;&icirc;&euml;&uuml;&ccedil;&icirc;&acirc;&agrave;&iacute;&egrave;&aring; &ntilde;&egrave;&igrave;&acirc;&icirc;&euml;&icirc;&acirc;">
+		<param name="Local" value="Symbols.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>
